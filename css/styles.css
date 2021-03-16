@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Tajawal|Kadwa');
+
+/************* General Styles **************/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e1edeb;
+  border-radius: 10px;
+  font: 17px/1.5 "Tajawal", sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  width: 80%;
+}
+
+h1,
+h2 {
+  font-family: "Merriweather", serif;
+}
+
+img {
+  border: #333 solid 1px;
+  height: auto;
+  max-width: 100%;
+}
+
+/******** Widths for anything needed to be centered on page **************/
+#page-header,
+nav ul {
+  margin: 0 auto;
+  max-width: 1183px;
+  width: 90%;
+}
+
+/******** Page Header *************/
+#page-header {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div:first-child {
+  flex: 1;
+  order: 2;
+  text-align: center;
+}
+
+div:first-child h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+div:first-child p {
+  font: bold small-caps 20px/1.5 "Kadwa", serif;
+  margin: 0;
+}
+
+div:last-child {
+  flex: 1;
+  margin-right: .5rem;
+  order: 1;
+}
+
+div:last-child img {
+  display: block;
+  margin: 0 auto;
+}
+
+/************** Navbar ****************/
+nav {
+  background-color: #005583;
+  border-top: #333 solid 5px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  padding: .5rem;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/********* Button ***********/
+.btn {
+	padding: 10px;
+	font-size: 15px;
+	color: white;
+	background: #005583;
+	border: none;
+	border-radius: 5px;
+}
