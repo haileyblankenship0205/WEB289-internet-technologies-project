@@ -8,7 +8,7 @@ $products = $db->query('SELECT product_image, product_name, product_price FROM p
 <html>
   <head>
   <meta charset="utf-8">
-    <title>Pauls Pottery - Shop Pottery</title>
+    <title>Paul's Pottery - Shop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/products.css" rel="stylesheet">
@@ -16,28 +16,26 @@ $products = $db->query('SELECT product_image, product_name, product_price FROM p
 
   <body>
     <header id="page-header" role="banner" aria-label="document-header">
-      <div>
-        <h1>Shop Pauls Pottery</h1>
+      <div id="heading">
+        <h1>Shop Paul's Pottery</h1>
         <p>Log in to purchase pottery items</p>
       </div>
     </header>
       
-    <nav role="navigation">
-      <label for="nav-checkbox" id="nav-trigger">Menu</label>
-      <input type="checkbox" id="nav-checkbox">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.php">Shop</a></li>
-        <li><a href="login.php">Log In</a></li>
-      </ul>
-    </nav>   
+    <?php include 'private/gen-nav.php'; 
 
-    <?php foreach ($products as $products){ ?>
-    <section>  
-        <img src = "<?php echo $products['product_image']; ?>">
-        <p><?php echo $products['product_name']; ?></p>
-        <p><?php echo "$" . $products['product_price']; ?></p>
-    </section>
-    <?php } ?>
+    $result = mysqli_query($db,"SELECT * FROM `product`");
+    while($row = mysqli_fetch_assoc($result)){
+		echo "<section class='product_wrapper'>
+			  <form method='post' action=''>
+			  <input type='hidden' name='product_id' value=".$row['product_id']." />
+			  <div class='image'><img src='".$row['product_image']."' /></div>
+			  <div class='name'>".$row['product_name']."</div>
+		   	  <div class='price'>$".$row['product_price']."</div>
+			  </form>
+        </section>";
+        }
+mysqli_close($db);
+?>
   </body>
 </html>

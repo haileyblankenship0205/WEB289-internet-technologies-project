@@ -31,7 +31,7 @@ function register(){
 
 	// form validation: ensure that the form is correctly filled
 	if (empty($firstname)) { 
-		array_push($errors, "First Name is required"); 
+		array_push (e($errors, "First Name is required")); 
 	}
 	if (empty($firstname)) { 
 		array_push($errors, "Last Name is required"); 

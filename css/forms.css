@@ -1,49 +1,69 @@
-* { margin: 0px; padding: 0px; }
-body {
-	font-size: 120%;
-	background: #F8F8FF;
+* { 
+	margin: 0px; 
+	padding: 0px; 
 }
-.header{
-	width: 40%;
-	margin: 50px auto 0px;
-	color: white;
+
+body {
+	background-color: #e1edeb;
+	font-size: 120%;
+}
+
+.header {
 	background: #005583;;
-	text-align: center;
 	border: 1px solid #B0C4DE;
 	border-bottom: none;
 	border-radius: 10px 10px 0px 0px;
+	color: #fff;
+	margin: 60px auto 0px;
 	padding: 20px;
-}
-form, .content {
+	text-align: center;
 	width: 40%;
+}
+
+form, .content {
+	background: #fff;
+	border: 1px solid #B0C4DE;
+	border-radius: 0px 0px 10px 10px;
 	margin: 0px auto;
 	padding: 20px;
-	border: 1px solid #B0C4DE;
-	background: white;
-	border-radius: 0px 0px 10px 10px;
+	width: 40%;
 }
+
 .input-group {
 	margin: 10px 0px 10px 0px;
 }
+
 .input-group label {
 	display: block;
-	text-align: left;
 	margin: 3px;
+	text-align: left;
 }
+
 .input-group input {
+	border: 1px solid gray;
+	border-radius: 5px;
+	font-size: 16px;
 	height: 30px;
+	padding: 5px 10px;
 	width: 93%;
-	padding: 5px 10px;
-	font-size: 16px;
-	border-radius: 5px;
-	border: 1px solid gray;
 }
+
 #user_type {
-	height: 40px;
-	width: 98%;
-	padding: 5px 10px;
 	background: white;
-	font-size: 16px;
-	border-radius: 5px;
 	border: 1px solid gray;
+	border-radius: 5px;
+	font-size: 16px;
+	height: 40px;
+	padding: 5px 10px;
+	width: 98%;
+}
+
+/********* Button ***********/
+.btn {
+	background: #005583;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	font-size: 15px;
+	padding: 10px;
 }

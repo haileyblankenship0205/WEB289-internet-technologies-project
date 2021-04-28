@@ -37,9 +37,10 @@ nav ul {
 #page-header {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 60px;
 }
 
-div:first-child {
+#heading {
   flex: 1;
   order: 2;
   text-align: center;
@@ -84,6 +85,15 @@ nav ul li {
   display: inline;
 }
 
+nav ul li:first-of-type {
+  color: #fff;
+  float: left;
+}
+
+nav ul li:last-of-type {
+  float: right;
+}
+
 nav ul li a {
   color: #fff;
   display: inline-block;
@@ -97,6 +107,20 @@ nav ul li a:hover {
   color: #333;
 }
 
+#nav-trigger {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  padding: .5rem;
+  text-align: center;
+}
+
+#nav-trigger,
+#nav-checkbox {
+  display: none;
+}
+
 /********* Button ***********/
 .btn {
 	padding: 10px;
@@ -105,4 +129,37 @@ nav ul li a:hover {
 	background: #005583;
 	border: none;
 	border-radius: 5px;
+}
+
+/************ 794px and narrower ****************/
+@media screen and (max-width: 794px) {
+  #nav-trigger {
+    display: block;
+  }
+  #nav-checkbox:checked + ul {
+    display: block;
+  }
+  nav ul {
+    display: none;
+    width: 100%;
+  }
+  nav ul li {
+    display: block;
+  }
+
+  nav ul li:last-of-type {
+    float: none;
+  }
+  nav ul li a {
+    border-bottom: #000 solid 2px;
+    display: block;
+    min-height: 45px;
+  }
+}
+
+/************** 569px and narrower ****************/
+@media screen and (max-width: 569px) {
+  #page-header {
+    flex-direction: column-reverse;
+  }
 }
